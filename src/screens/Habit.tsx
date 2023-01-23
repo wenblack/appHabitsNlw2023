@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { useRoute } from "@react-navigation/native";
 import { Alert, ScrollView, Text, View } from "react-native";
@@ -6,17 +7,26 @@ import clsx from "clsx";
 
 import { api } from "../lib/axios";
 import { generateProgressPercentage } from "../utils/generate-progress-percentage";
+=======
+import { useRoute } from "@react-navigation/native";
+import { ScrollView, Text, View } from "react-native";
+import dayjs from "dayjs";
+>>>>>>> 50bbbd2b94170bee444effe4417d7eb96d9ade1c
 
 import { BackButton } from "../components/BackButton";
 import { ProgressBar } from "../components/Progress.Bar";
 import { Checkbox } from "../components/Checkbox";
+<<<<<<< HEAD
 import { Loading } from "../components/Loading";
 import { HabitsEmpty } from "../components/HabitsEmpty";
+=======
+>>>>>>> 50bbbd2b94170bee444effe4417d7eb96d9ade1c
 
 interface Params {
   date: string;
 }
 
+<<<<<<< HEAD
 interface DayInfoProps {
   completedHabits: string[];
   possibleHabits: {
@@ -30,10 +40,14 @@ export function Habit() {
   const [dayInfo, setDayInfo] = useState<DayInfoProps | null>(null);
   const [completedHabits, setCompletedHabits] = useState<string[]>([])
 
+=======
+export function Habit() {
+>>>>>>> 50bbbd2b94170bee444effe4417d7eb96d9ade1c
   const route = useRoute()
   const { date } = route.params as Params;
 
   const parsedDate = dayjs(date);
+<<<<<<< HEAD
   const isDateInPast = parsedDate.endOf('day').isBefore(new Date());
   const dayOfWeek = parsedDate.format('dddd');
   const dayAndMonth = parsedDate.format('DD/MM');
@@ -80,6 +94,11 @@ export function Habit() {
     )
   }
 
+=======
+  const dayOfWeek = parsedDate.format('dddd');
+  const dayAndMonth = parsedDate.format('DD/MM');
+
+>>>>>>> 50bbbd2b94170bee444effe4417d7eb96d9ade1c
   return (
     <View className="flex-1 bg-background px-8 pt-16">
       <ScrollView
@@ -96,6 +115,7 @@ export function Habit() {
           {dayAndMonth}
         </Text>
 
+<<<<<<< HEAD
         <ProgressBar progress={habitsProgress} />
 
         <View className={clsx("mt-6", {
@@ -124,6 +144,21 @@ export function Habit() {
             </Text>
           )
         }
+=======
+        <ProgressBar progress={30} />
+
+        <View className="mt-6">
+          <Checkbox 
+            title="Beber 2L de água"
+            checked={false}
+          />
+
+          <Checkbox 
+            title="Caminhar"
+            checked
+          />
+        </View>
+>>>>>>> 50bbbd2b94170bee444effe4417d7eb96d9ade1c
       </ScrollView>
     </View>
   )

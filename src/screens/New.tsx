@@ -1,17 +1,27 @@
 import { useState } from "react";
+<<<<<<< HEAD
 import { Alert, ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
+=======
+import { ScrollView, Text, TextInput, TouchableOpacity, View } from "react-native";
+>>>>>>> 50bbbd2b94170bee444effe4417d7eb96d9ade1c
 import { Feather } from '@expo/vector-icons'
 import colors from "tailwindcss/colors";
 
 import { BackButton } from "../components/BackButton";
 import { Checkbox } from "../components/Checkbox";
+<<<<<<< HEAD
 import { api } from "../lib/axios";
+=======
+>>>>>>> 50bbbd2b94170bee444effe4417d7eb96d9ade1c
 
 const availableWeekDays = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
 
 export function New() {
   const [weekDays, setWeekDays] = useState<number[]>([]);
+<<<<<<< HEAD
   const [title, setTitle] = useState('');
+=======
+>>>>>>> 50bbbd2b94170bee444effe4417d7eb96d9ade1c
 
   function handleToggleWeekDay(weekDayIndex: number) {
     if (weekDays.includes(weekDayIndex)) {
@@ -20,6 +30,7 @@ export function New() {
       setWeekDays(prevState => [...prevState, weekDayIndex])
     }
   }
+<<<<<<< HEAD
 
   async function handleCreateNewHabit() {
     try {
@@ -39,6 +50,8 @@ export function New() {
     }
   }
 
+=======
+>>>>>>> 50bbbd2b94170bee444effe4417d7eb96d9ade1c
   return (
     <View className="flex-1 bg-background px-8 pt-16">
       <ScrollView 
@@ -59,8 +72,11 @@ export function New() {
           className="h-12 pl-4 rounded-lg mt-3 bg-zinc-900 text-white border-2 border-zinc-800 focus:border-green-600"
           placeholder="Exercícios, dormir bem, etc..."
           placeholderTextColor={colors.zinc[400]}
+<<<<<<< HEAD
           onChangeText={setTitle}
           value={title}
+=======
+>>>>>>> 50bbbd2b94170bee444effe4417d7eb96d9ade1c
         />
 
         <Text className="font-semibold mt-4 mb-3 text-white text-base">
@@ -81,7 +97,10 @@ export function New() {
         <TouchableOpacity
           className="w-full h-14 flex-row items-center justify-center bg-green-600 rounded-md mt-6"
           activeOpacity={0.7}
+<<<<<<< HEAD
           onPress={handleCreateNewHabit}
+=======
+>>>>>>> 50bbbd2b94170bee444effe4417d7eb96d9ade1c
         >
           <Feather 
            name="check"

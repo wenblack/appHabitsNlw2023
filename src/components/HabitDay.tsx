@@ -1,8 +1,11 @@
 import { Dimensions, TouchableOpacity, TouchableOpacityProps } from "react-native";
+<<<<<<< HEAD
 import clsx from "clsx";
 
 import { generateProgressPercentage } from "../utils/generate-progress-percentage";
 import dayjs from "dayjs";
+=======
+>>>>>>> 50bbbd2b94170bee444effe4417d7eb96d9ade1c
 
 const WEEK_DAYS = 7;
 const SCREEN_HORIZONTAL_PADDING = (32 * 2) / 5;
@@ -10,6 +13,7 @@ const SCREEN_HORIZONTAL_PADDING = (32 * 2) / 5;
 export const DAY_MARGIN_BETWEEN = 8;
 export const DAY_SIZE =  (Dimensions.get('screen').width / WEEK_DAYS) - (SCREEN_HORIZONTAL_PADDING + 5);
 
+<<<<<<< HEAD
 interface Props extends TouchableOpacityProps {
   amountOfHabits?: number;
   amountCompleted?: number;
@@ -34,6 +38,14 @@ export function HabitDay({ amountOfHabits = 0, amountCompleted = 0, date, ...res
           ["border-white border-4"] : isCurrentDay,
         } 
       )}
+=======
+interface Props extends TouchableOpacityProps {}
+
+export function HabitDay({ ...rest }: Props) {
+  return (
+    <TouchableOpacity 
+      className="bg-zinc-900 rounded-lg border-2 m-1 border-zinc-800"
+>>>>>>> 50bbbd2b94170bee444effe4417d7eb96d9ade1c
       style={{ width: DAY_SIZE, height: DAY_SIZE }}
       activeOpacity={0.7}
       {...rest}
